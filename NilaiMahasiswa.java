@@ -43,7 +43,7 @@ public class NilaiMahasiswa {
     static void inputData() {
         System.out.print("Masukkan jumlah mahasiswa: ");
         int jumlah = scanner.nextInt();
-        scanner.nextLine(); // Buang newline
+        scanner.nextLine(); 
 
         for (int i = 0; i < jumlah; i++) {
             System.out.println("\nMahasiswa ke-" + (i + 1));
@@ -59,7 +59,6 @@ public class NilaiMahasiswa {
             mhs.uts = inputNilai("Nilai UTS");
             mhs.uas = inputNilai("Nilai UAS");
 
-            // Hitung nilai akhir dan grade
             mhs.nilaiAkhir = hitungNilaiAkhir(mhs.tugas, mhs.uts, mhs.uas);
             mhs.grade = tentukanGrade(mhs.nilaiAkhir);
 
@@ -76,7 +75,7 @@ public class NilaiMahasiswa {
                 System.out.println("Nilai harus antara 0 - 100!");
             }
         } while (nilai < 0 || nilai > 100);
-        scanner.nextLine(); // Buang newline setelah input nilai
+        scanner.nextLine(); 
         return nilai;
     }
 
